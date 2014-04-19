@@ -15,6 +15,14 @@ Windows7, Max OS X での動作確認を取っています。
 
 ## 使い方
 
+### VirtualBox をインストール
+
+https://www.virtualbox.org/wiki/Downloads
+
+### Vagrant をインストール
+
+http://www.vagrantup.com/downloads.html
+
 ### プラグインをインストール
 
 Windows の場合は vagrant up する前に vagrant-windows プラグインをインストールしてください。
