@@ -1,0 +1,15 @@
+[mysql]
+default-character-set=utf8
+show-warnings
+prompt='[\d] mysql> '
+
+[mysqld]
+user=mysql
+symbolic-links=0
+character-set-server=utf8
+default-storage-engine=InnoDB
+sql_mode=NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES
+explicit_defaults_for_timestamp=1
+
+innodb_buffer_pool_size=64MB
+table_definition_cache=400

@@ -1,0 +1,10 @@
+; Enable APCu extension module
+extension = apcu.so
+
+apc.enabled=1
+apc.enable_cli=1
+
+apc.shm_size=32M
+apc.ttl=3600
+apc.gc_ttl=3600
+apc.mmap_file_mask=/tmp/apc.XXXXXX

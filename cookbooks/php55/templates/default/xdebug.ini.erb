@@ -1,0 +1,11 @@
+; Enable xdebug extension module
+zend_extension=/usr/lib64/php/modules/xdebug.so
+
+xdebug.remote_enable=<%= node[:php][:xdebug_enable] %>
+xdebug.remote_autostart=<%= node[:php][:xdebug_enable] %>
+xdebug.remote_host="<%= node[:php][:remote_host] %>"
+xdebug.remote_port=9000
+xdebug.profiler_enable=<%= node[:php][:xdebug_enable] %>
+xdebug.profiler_output_dir="/tmp"
+xdebug.max_nesting_level=1000
+xdebug.idekey = "<%= node[:php][:xdebug_idekey] %>"

@@ -1,0 +1,39 @@
+[global]
+dos charset = CP932
+unix charset = UTF-8
+	
+workgroup = MYGROUP
+server string = Samba Server Version %v
+
+interfaces = eth0 127.0.0.0/8 <%= node[:samba]['hosts_allow'] %>
+bind interfaces only = yes
+
+hosts allow = <%= node[:samba]['hosts_allow'] %>
+hosts deny = all
+
+log file = /var/log/samba/log.%m
+max log size = 50
+
+max protocol = SMB2
+security = user
+passdb backend = tdbsam
+
+guest account = vagrant
+map to guest = Bad User
+
+wins support = yes
+dns proxy = no
+
+load printers = no
+cups options = raw
+printing = bsd
+
+[vagrant]
+comment = Vagrant public directory
+path = <%= node[:nginx][:document_root] %>
+create mode = 0644
+directory mode = 0775
+public = yes
+guest ok = yes
+writable = yes
+printable = no

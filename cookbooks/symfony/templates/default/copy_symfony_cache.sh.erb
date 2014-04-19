@@ -1,0 +1,9 @@
+#!/bin/sh
+
+if [ -e /dev/shm/symfony/cache/dev/appDevUrlGenerator.php ]; then
+  rsync -tq /dev/shm/symfony/cache/dev/appDevUrlGenerator.php /var/www/vagrant/symfony/app/cache
+  rsync -trq /dev/shm/symfony/cache/dev/translations /var/www/vagrant/symfony/app/cache
+  rsync -tq /dev/shm/symfony/cache/dev/appDevDebugProjectContainer.xml /var/www/vagrant/symfony/app/cache
+fi
+
+exit 0
