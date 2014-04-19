@@ -47,7 +47,7 @@ http://192.168.33.10/symfony/web/_profiler/phpinfo
 
 http://192.168.33.10/symfony/web/
 
-# Xdebug を有効化する
+# Xdebug を有効にしたい場合
 
 初期状態では Xdebug を無効にしています。有効にする場合は Vagrantfile の chef.json xdebug_enable 1 にして vagrant provision してください。
 
@@ -73,14 +73,14 @@ vagrant provision で変更を反映します。
 $ vagrant provision
 ```
 
-# Samba を有効にする
+# Samba を有効にしたい場合
 
 
 初期状態では Samba を無効にしています。有効にする場合は Vagrantfile の chef.json samba:enable: 1 にして vagrant provision してください。
 
+```
 # vagrant-php-symfony2-sandbox/Vagrantfile
 
-```
 ...
 chef.json = {
   ...
