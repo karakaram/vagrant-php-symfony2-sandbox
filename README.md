@@ -58,6 +58,7 @@ http://192.168.33.10/symfony/web/
 # Vagrant の Symfony の動作が遅い場合
 
 以下のサイトに対策をまとめました
+
 http://www.karakaram.com/vagrant-symfony
 
 
