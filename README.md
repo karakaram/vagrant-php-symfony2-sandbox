@@ -55,6 +55,12 @@ http://192.168.33.10/symfony/web/_profiler/phpinfo
 
 http://192.168.33.10/symfony/web/
 
+# Vagrant の Symfony の動作が遅い場合
+
+以下のサイトに対策をまとめました
+http://www.karakaram.com/vagrant-symfony
+
+
 # Xdebug を有効にしたい場合
 
 初期状態では Xdebug を無効にしています。有効にする場合は Vagrantfile の chef.json xdebug_enable 1 にして vagrant provision してください。
