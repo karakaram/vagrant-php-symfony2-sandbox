@@ -59,8 +59,7 @@ http://192.168.33.10/symfony/web/
 
 以下のサイトに対策をまとめました
 
-http://www.karakaram.com/vagrant-symfony
-
+[VagrantでSymfony2開発 Symfony勉強会#9でLTしてきた](http://www.karakaram.com/vagrant-symfony)
 
 # Xdebug を有効にしたい場合
 
