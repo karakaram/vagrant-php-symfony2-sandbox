@@ -7,6 +7,7 @@ cd <%= node[:nginx][:document_root] %>
 
 # Change permission
 chown -R vagrant:vagrant symfony
+rm -rf symfony/app/cache/* symfony/app/logs/*
 chmod 775 symfony/app/cache symfony/app/logs
 #chmod +a "nginx allow delete,write,append,file_inherit,directory_inherit" symfony/app/cache symfony/app/logs
 #chmod +a "vagrant allow delete,write,append,file_inherit,directory_inherit" symfony/app/cache symfony/app/logs
