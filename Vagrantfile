@@ -14,8 +14,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # config.omnibus.chef_version = "11.4.0"
 
   config.vm.provider :virtualbox do |vb|
-    vb.customize ["modifyvm", :id, "--memory", "1024", "--cpus", "4"]
-    vb.customize ["modifyvm", :id, "--ioapic", "on"]
+    # vb.customize ["modifyvm", :id, "--memory", "1024", "--cpus", "4"]
+    # vb.customize ["modifyvm", :id, "--ioapic", "on"]
     vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
     vb.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
   end
