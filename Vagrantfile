@@ -8,7 +8,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.network :private_network, ip: "192.168.33.10"
 
-  # config.vm.synced_folder "~/vagrant_symfony2_sync", "/var/www/vagrant", :create => true, :owner=> 'vagrant', :group=>'vagrant', :mount_options => ['dmode=775,fmode=664']
+  config.vm.synced_folder "~/vagrant_symfony2_sync", "/var/www/vagrant", :create => true, :owner=> 'vagrant', :group=>'vagrant', :mount_options => ['dmode=775,fmode=664']
   # config.vm.synced_folder "~/vagrant_symfony2_sync", "/var/www/vagrant", :create => true, type: "nfs"
 
   # config.omnibus.chef_version = "11.4.0"
