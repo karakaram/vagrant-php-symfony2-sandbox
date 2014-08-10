@@ -11,7 +11,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.synced_folder "~/vagrant_symfony2_sync", "/var/www/vagrant", :create => true, :owner=> 'vagrant', :group=>'vagrant', :mount_options => ['dmode=775,fmode=664']
   # config.vm.synced_folder "~/vagrant_symfony2_sync", "/var/www/vagrant", :create => true, type: "nfs"
 
-  # config.omnibus.chef_version = "11.4.0"
+  config.omnibus.chef_version = "11.4.2"
 
   config.vm.provider :virtualbox do |vb|
     # vb.customize ["modifyvm", :id, "--memory", "1024", "--cpus", "4"]
