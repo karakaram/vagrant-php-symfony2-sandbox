@@ -1,9 +1,14 @@
+# execute "Disable IPv6 /etc/sysctl.conf" do
+#   command "echo 'net.ipv6.conf.all.disable_ipv6 = 1' >> /etc/sysctl.conf"
+#   only_if "grep 'net.ipv6.conf.all.disable_ipv6 = 1' /etc/sysctl.conf"
+# end
+
 service "iptables" do
   action [:disable, :stop]
 end
 
 execute "Install epel repository" do
-  command "rpm -ivh http://ftp.riken.jp/Linux/fedora/epel/6/i386/epel-release-6-8.noarch.rpm"
+  command "rpm -ivh http://ftp.riken.jp/Linux/fedora/epel/6/x86_64/epel-release-6-8.noarch.rpm"
   not_if "rpm -qa | grep -q 'epel-release'"
 end
 
