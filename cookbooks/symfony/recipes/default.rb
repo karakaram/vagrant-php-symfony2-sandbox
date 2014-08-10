@@ -16,15 +16,16 @@ directory "#{node['nginx']['document_root']}" do
   group 'vagrant'
   mode 0775
   action :create
+  not_if { ::File.directory?("#{node['nginx']['document_root']}") }
 end
 
 # download PHPUnit for IDE Code Complete
-execute "download phpunit.phar for IDE code complete" do
-  user "vagrant"
-  group "vagrant"
-  command "/usr/bin/wget https://phar.phpunit.de/phpunit.phar -P #{node['nginx']['document_root']}"
-  not_if { ::File.exists?("#{node['nginx']['document_root']}/phpunit.phar") }
-end
+# execute "download phpunit.phar for IDE code complete" do
+#   user "vagrant"
+#   group "vagrant"
+#   command "/usr/bin/wget https://phar.phpunit.de/phpunit.phar -P #{node['nginx']['document_root']}"
+#   not_if { ::File.exists?("#{node['nginx']['document_root']}/phpunit.phar") }
+# end
 
 execute "install symfony2 from composer" do
   user "vagrant"
@@ -90,9 +91,9 @@ end
 
 # copy_symfony_cache.sh works for Symfony2-plugin
 template "#{node['nginx']['document_root']}/copy_symfony_cache.sh" do
-  mode 0664
-  owner "vagrant"
-  group "vagrant"
+  # mode 0664
+  # owner "vagrant"
+  # group "vagrant"
   source "copy_symfony_cache.sh.erb"
 end
 
