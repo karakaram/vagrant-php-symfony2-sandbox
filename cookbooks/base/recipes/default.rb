@@ -1,8 +1,3 @@
-# execute "Disable IPv6 /etc/sysctl.conf" do
-#   command "echo 'net.ipv6.conf.all.disable_ipv6 = 1' >> /etc/sysctl.conf"
-#   only_if "grep 'net.ipv6.conf.all.disable_ipv6 = 1' /etc/sysctl.conf"
-# end
-
 service "iptables" do
   action [:disable, :stop]
 end
