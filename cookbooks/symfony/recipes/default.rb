@@ -91,9 +91,6 @@ end
 
 # copy_symfony_cache.sh works for Symfony2-plugin
 template "#{node['nginx']['document_root']}/copy_symfony_cache.sh" do
-  # mode 0664
-  # owner "vagrant"
-  # group "vagrant"
   source "copy_symfony_cache.sh.erb"
 end
 
