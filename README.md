@@ -31,10 +31,16 @@ Windows の場合は vagrant up する前に vagrant-windows プラグインを�
 $ vagrant plugin install vagrant-windows
 ```
 
-推奨プラグイン。Guest Additions のバージョンを最新版に自動更新します。
+vagrant up する時、box に Chef Solo がインストールされていない場合は自動インストールする
 
 ```
 $ vagrant plugin install vagrant-omnibus
+```
+
+推奨プラグイン。Guest Additions のバージョンを最新版に自動更新します。
+
+```
+$ vagrant plugin install vagrant-vbguest
 ```
 
 ### vagrant up
