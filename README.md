@@ -2,7 +2,7 @@
 
 ## 概要
 
-Symfony2.4 環境を CentOS6.5 上に構築します。vagrant up 後、すぐに Symfony を動作させることができます。
+Symfony2.6 環境を CentOS6.5 上に構築します。vagrant up 後、すぐに Symfony を動作させることができます。
 
 Windows7, Max OS X での動作確認を取っています。
 
@@ -11,7 +11,7 @@ Windows7, Max OS X での動作確認を取っています。
 * PHP5.5, OPcache, APCu, Xdebug, PHPUnit, Composer
 * MySQL5.6
 * Samba(for Windows)
-* Symfony2.4
+* Symfony2.6
 
 ## 使い方
 
