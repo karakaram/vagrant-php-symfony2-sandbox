@@ -11,7 +11,7 @@ Windows7, Max OS X での動作確認を取っています。
 * PHP5.5, OPcache, APCu, Xdebug, PHPUnit, Composer
 * MySQL5.6
 * Samba(for Windows)
-* Symfony2.6
+* Symfony2.7
 
 ## 使い方
 

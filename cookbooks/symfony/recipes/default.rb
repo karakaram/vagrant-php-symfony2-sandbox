@@ -30,7 +30,7 @@ end
 execute "install symfony2 from composer" do
   user "vagrant"
   group "vagrant"
-  command "/usr/local/bin/composer create-project symfony/framework-standard-edition #{node['nginx']['document_root']}/symfony 2.6.*"
+  command "/usr/local/bin/composer create-project symfony/framework-standard-edition #{node['nginx']['document_root']}/symfony 2.7.*"
   not_if { ::File.directory?("#{node['nginx']['document_root']}/symfony") }
 end
 
